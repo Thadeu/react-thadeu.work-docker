@@ -1,0 +1,19 @@
+body {
+  align-items: center;
+  background: #373854 !important;
+  display: flex;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.space-around {
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  img {
+    padding: 0px 10px;
+  }
+}
