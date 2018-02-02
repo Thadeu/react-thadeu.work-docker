@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/Thadeu/thadeu.work.svg?style=svg)](https://circleci.com/gh/Thadeu/thadeu.work)
 
+[![Build Status](https://travis-ci.org/Thadeu/thadeu.work.svg?branch=master)](https://travis-ci.org/Thadeu/thadeu.work)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
