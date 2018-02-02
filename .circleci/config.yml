@@ -3,32 +3,35 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:8
+
+    environment:
+      TZ: /usr/share/zoneinfo/America/Araguaina
 
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
+          name: Restore node_modules cache
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - v1-node-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          - v1-node-{{ arch }}-{{ .Branch }}-
+          - v1-node-{{ arch }}-
 
-      - run: yarn install
+      - run:
+          name: Nodejs Version
+          command: node --version
+
+      - run: 
+          name: Install Packages
+          command: yarn install
+
+      - run: 
+          name: Running tests
+          command: yarn test
 
       - save_cache:
+          name: Save node_modules cache
+          key: v1-node-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: yarn test
-
-    # working_directory: ../
-    
-    # steps:
-    #   - checkout
-    #   - run: npm install
-    #   - run: npm test
