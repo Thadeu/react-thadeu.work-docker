@@ -1,6 +1,6 @@
 # thadeu.work [![Build Status](https://travis-ci.org/Thadeu/react-thadeu.work-docker.svg?branch=master)](https://travis-ci.org/Thadeu/react-thadeu.work-docker)
 
-# Visit
+## Visit
 Live preview in http://thadeu.work
 
 ## Dockerized Application
