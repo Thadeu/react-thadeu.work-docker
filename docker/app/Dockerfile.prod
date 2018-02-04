@@ -1,0 +1,15 @@
+FROM node:9 as app-prod
+
+RUN npm install -g serve
+EXPOSE 5000
+
+RUN mkdir -p /usr/src
+ADD . /usr/src
+WORKDIR /usr/src/app
+
+RUN rm -rf node_modules
+RUN npm install
+
+RUN npm run build --production
+CMD serve -s build
+

@@ -14,7 +14,7 @@ class App extends Component {
         </div>
 
         <div>
-          <p> contato@thadeu.work - +55 63 98486-6338</p>
+          <p> dev@thadeu.work :: +55 63 98486-6338</p>
         </div>
       </div>
     );

@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile.dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+
+  ####################################
+  # Use in production to server
+  # tested in the DigitalOcean Cloud
+  # docker-compose up -d server
+  ####################################
+  server:
+    build:
+      context: docker/server
+      dockerfile: Dockerfile.prod
+    ports:
+      - '80:80'
+    links: # services to access http://app
+      - app:app
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile.prod
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - CI=true

@@ -1,0 +1,13 @@
+FROM node:9 as app-dev
+
+EXPOSE 3000
+
+RUN mkdir -p /usr/src
+ADD . /usr/src
+WORKDIR /usr/src/app
+
+RUN rm -rf node_modules
+RUN npm install
+
+CMD npm run start
+
