@@ -7,5 +7,5 @@ cache:
 before_script: cd app
 script:
   - npm install
-  - npm run build
   - npm test
+  - npm run build

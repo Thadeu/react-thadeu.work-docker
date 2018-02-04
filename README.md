@@ -1,6 +1,4 @@
-# thadeu.work [![Build Status](https://travis-ci.org/Thadeu/thadeu.work.svg?branch=master)](https://travis-ci.org/Thadeu/thadeu.work)
-
-[![CircleCI](https://circleci.com/gh/Thadeu/thadeu.work.svg?style=svg)](https://circleci.com/gh/Thadeu/thadeu.work)
+# thadeu.work [![Build Status](https://travis-ci.org/Thadeu/react-thadeu.work-docker.svg?branch=master)](https://travis-ci.org/Thadeu/react-thadeu.work-docker)
 
 # Visit
 Live preview in http://thadeu.work
